@@ -116,7 +116,9 @@ async function start() {
   await checkConfig()
   LoggerUtil.initLogger()
   const rule = new schedule.RecurrenceRule()
-  rule.second = 30
+  rule.hour = 0
+  rule.minute = 0
+  rule.second = 0
   schedule.scheduleJob(rule, clean)
 }
 
